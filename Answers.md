@@ -1,0 +1,4 @@
+1. The relationship between Product and Product_category will be Many-to-One, which means multiple products can belong to the same category.
+However, it might not be logical to have multiple categories for a single product, as it will increase the complexity of the design pattern and also make the analysis unnecessarily difficult.
+
+2. In the Product table, the field category_id (which represents category of the product) will be a foreign key, which references the field id in Product_category table. So, if we try to insert a record in Product table by assigning an invalid category, we will get an error. This way we can ensure that each product of our Product table has only a valid category assigned to it.
